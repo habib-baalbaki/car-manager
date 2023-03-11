@@ -16,19 +16,16 @@ public class Car implements Serializable {
     private String description;
     private int year;
     private String imageUrl;
-    @Column(nullable = false,updatable = false)
-    private String carCode;
 
     public Car() {
     }
 
-    public Car(String name, String vin, String description, int year, String imageUrl, String carCode) {
+    public Car(String name, String vin, String description, int year, String imageUrl) {
         this.name = name;
         this.vin = vin;
         this.description = description;
         this.year = year;
         this.imageUrl = imageUrl;
-        this.carCode = carCode;
     }
 
 
@@ -81,13 +78,6 @@ public class Car implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public String getCarCode() {
-        return carCode;
-    }
-
-    public void setCarCode(String carCode) {
-        this.carCode = carCode;
-    }
 
     @Override
     public String toString() {
@@ -98,7 +88,7 @@ public class Car implements Serializable {
                 ", description='" + description + '\'' +
                 ", year=" + year +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", carCode='" + carCode + '\'' +
+
                 '}';
     }
 

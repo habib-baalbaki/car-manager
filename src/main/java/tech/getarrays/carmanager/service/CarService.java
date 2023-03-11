@@ -20,7 +20,6 @@ public class CarService {
     }
 
     public Car addCar(Car car) {
-        car.setCarCode(UUID.randomUUID().toString());
         return carRepo.save(car);
     }
 
